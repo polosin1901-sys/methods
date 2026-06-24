@@ -14,12 +14,11 @@ public class Main {
 
     // 2 задача
     public static void displayMessage(int clientDeviceYear, int clientOS) {
-        int currentYear = LocalDate.now().getYear();
-        if (clientDeviceYear < currentYear && clientOS == 0) {
+        if (clientDeviceYear < 2015 && clientOS == 0) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        } else if (clientDeviceYear < currentYear && clientOS == 1) {
+        } else if (clientDeviceYear >= 2015 && clientOS == 1) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        } else if (clientDeviceYear >= currentYear && clientOS == 0) {
+        } else if (clientDeviceYear >= 2015 && clientOS == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке");
         } else {
             System.out.println("Установите версию приложения для Android по ссылке");
